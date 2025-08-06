@@ -1,0 +1,3 @@
+En esta investigación, se explora el uso y la metodología de la aplicación Django. Es un framework de alto nivel basado en Python que promueve el desarrollo rápido y limpio a través del paradigma Modelo-Vista-Controlador (MVC). Se describe la arquitectura interna del framework, detallando cómo gestiona el enrutamiento, la manipulación de datos mediante modelos ORM (Object-Relational Mapping), y la generación dinámica de contenido a través de plantillas.
+
+Contiene el tutorial (hasta la parte 8) de la pagina: [Django Project](https://docs.djangoproject.com/en/5.2/intro/tutorial01/)

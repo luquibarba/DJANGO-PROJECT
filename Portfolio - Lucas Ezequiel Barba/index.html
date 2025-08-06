@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio - Lucas Barba</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="./logo/favicon.ico" />
+</head>
+<body>
+
+<header class="main-header">
+  <a href="" id="logo-link">
+  <img src="./logo/logoanimado.png" class="imagen" alt="Logo animado" width="50" height="48" id="logo-reload">
+  </a>
+  <script>
+  document.getElementById("logo-reload").addEventListener("click", function () {
+    location.reload();
+  });
+</script>
+</header>
+
+  <nav class="dot-navigation">
+    <ul>
+      <li class="nav-dot active" data-section="section1"></li>
+      <li class="nav-dot" data-section="section2"></li>
+      <li class="nav-dot" data-section="section3"></li>
+      <li class="nav-dot" data-section="section4"></li>
+      <li class="nav-dot" data-section="section5"></li>
+
+    </ul>
+  </nav>
+
+  <div class="code-typewriters">
+    <div class="code-line" style="top: 15%; right: 8%;"><span id="code-typed-text-1"></span></div>
+    <div class="code-line" style="top: 30%; right: 3%;"><span id="code-typed-text-2"></span></div>
+    <div class="code-line" style="top: 45%; right: 10%;"><span id="code-typed-text-3"></span></div>
+  </div>
+
+  <div class="main-content-wrapper">
+    <section id="section1" class="content-section active">
+      <div style="display: flex; width: 100%; justify-content: space-between; align-items: center; padding: 0 5%;">
+        <article>
+          <div class="typed-text-container">
+            <span id="typed-text"></span>
+          </div>
+        </article>
+        <aside class="side">
+          <h1>Mi<br>portofolio</h1>
+          <a href="CV - LUCAS EZEQUIEL BARBA.pdf" download class="boton-descarga">Descargar CV</a>
+        </aside>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          new Typed("#typed-text", {
+            strings: ["Bienvenido", "Welcome", "Bienvenue", "Willkommen", "Benvenuto", "Bem-vindo", "Aloha", "哈哈"],
+            typeSpeed: 25,
+            backSpeed: 40,
+            backDelay: 2000,
+            startDelay: 500,
+            loop: true,
+            smartBackspace: true
+          });
+        });
+      </script>
+    </section>
+
+    <section id="section2" class="content-section">
+      <div class="about-carousel-container">
+        <div class="about-wrapper">
+          <div class="about-item" id="about-slide1">
+            <h2>Sobre mi</h2>
+             <img src="./logo/sobremi.jpg" alt="Sobre mi" style="max-width: 300px; margin-top: 20px;">
+            <p>Mi nombre es Lucas Barba, tengo 16 años y soy estudiante en el Instituto Industrial Luis A. Huergo. Me apasiona mucho el gran mundo de la programacion y principalmente el desarrollo de front-end. Estoy abierto a propuestas y nuevos desafios.</p>
+           
+          </div>
+          <div class="about-item" id="about-slide2">
+            <h2>Intereses</h2>
+            <img src="./logo/personal2.png" alt="Intereses" style="max-width: 300px; margin-top: 20px;">
+            <p>Fuera de la programacion, soy de Racing, me gusta mucho el futbol, hacer deporte y soy activo durante la semana. Es fundamental el balance entre el trabajo y el ejercicio para llegar al mejor punto de uno mismo.</p>
+            
+          </div>
+          <div class="about-item" id="about-slide3">
+            <h2>Metas y Aspiraciones</h2>
+            <img src="./logo/p3.png" alt="Metas" style="max-width: 300px; margin-top: 20px;">
+            <p>Mi objetivo a corto plazo es dominar el desarrollo web front-end y seguir aprendiendo constantemente. Sin embargo considero sumamente importante saber back-end como perfil de programador.</p>
+          </div>
+        </div>
+        <div class="about-navigation-buttons">
+          <button id="prevAbout">Anterior</button>
+          <button id="nextAbout">Siguiente</button>
+        </div>
+        <div class="about-dots-navigation">
+          <span class="about-dot active" data-about="about-slide1"></span>
+          <span class="about-dot" data-about="about-slide2"></span>
+          <span class="about-dot" data-about="about-slide3"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="section3" class="content-section">
+      <h1 style="margin-bottom: 40px;">Habilidades</h1>
+      <div class="container fila-tarjetas">
+        <div class="card tarjeta-python">
+          <div class="imgBx">
+            <img src="./logo/python.png" alt="Python" class="img-python">
+          </div>
+          <div class="contentBx">
+            <h2>Python</h2>
+            <div class="size">
+              <h3>Comprensión<br>Uso<br>Sintaxis</h3>
+            </div>
+            <a href="https://github.com/luquibarba/Mis-trabajos/tree/main/PYTHON/" target="_blank">Ver más</a>
+          </div>
+        </div>
+
+        <div class="card tarjeta-js">
+          <div class="imgBx">
+            <img src="./logo/ps.png" alt="" class="img-javascript">
+          </div>
+          <div class="contentBx">
+            <h2>Photoshop</h2>
+            <div class="size">
+              <h3>Edicion de Imagenes<br>Aplicacion de filtros<br>Uso de mascaras</h3>
+            </div>
+            <a href="https://github.com/luquibarba/Mis-trabajos/tree/main/PHOTOSHOP/" target="_blank">Ver más</a>
+          </div>
+        </div>
+
+        <div class="card tarjeta-html">
+          <div class="imgBx">
+            <img src="./logo/html.png" alt="HTML" class="img-html">
+          </div>
+          <div class="contentBx">
+            <h2>HTML</h2>
+            <div class="size">
+              <h3>Estructura<br>Semántica<br>Etiquetas</h3>
+            </div>
+            <a href="https://github.com/luquibarba/Mis-trabajos/tree/main/HTML%20-%20CSS%20-%20JS/Portfolio%20-%20Lucas%20Ezequiel%20Barba/" target="_blank">Ver más</a>
+          </div>
+        </div>
+
+        <div class="card tarjeta-css">
+          <div class="imgBx">
+            <img src="./logo/css.png" alt="CSS" class="img-css">
+          </div>
+          <div class="contentBx">
+            <h2>CSS</h2>
+            <div class="size">
+              <h3>Flexbox<br>Animaciones<br>Responsive</h3>
+            </div>
+            <a href="https://github.com/luquibarba/Mis-trabajos/tree/main/HTML%20-%20CSS%20-%20JS/" target="_blank">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section4" class="content-section">
+      <h1>Proyectos Destacados</h1>
+      <div class="project-carousel-container">
+        <div class="project-wrapper">
+          <div class="project-item" id="project1">
+            <h2>Proyecto de Portafolio</h2>
+            <p>Mi primer proyecto de portafolio para mostrar mis habilidades.</p>
+            <a href="https://github.com/luquibarba/Mis-trabajos/tree/main/HTML%20-%20CSS%20-%20JS/Portfolio%20-%20Lucas%20Ezequiel%20Barba/" target="_blank">Ver Proyecto</a>
+          </div>
+          <div class="project-item" id="project2">
+            <h2>Space Invaders</h2>
+            <img src="./logo/proyecto2.png" alt="Proyecto 2" style="max-width: 300px; margin-bottom: 20px;">
+            <p>Juego remodernizado del clasico con Python </p>
+            <a href="https://github.com/luquibarba/Mis-trabajos/tree/main/PYTHON/LB_SpaceInvaders/" target="_blank">Ver Proyecto</a>
+          </div>
+          <div class="project-item" id="project3">
+            <h2>Virtual Pet</h2>
+            <img src="./logo/proyecto3.png" alt="Proyecto 3" style="max-width: 300px; margin-bottom: 20px;">
+            <p>Juego de Mascota Virtual, donde podras alimentar, jugar y personalizar a tu "PUU"</p>
+            <a href="https://github.com/luquibarba/Mis-trabajos/tree/main/PYTHON/virtual%20pet/" target="_blank">Ver Proyecto</a>
+          </div>
+        </div>
+        <div class="project-arrow-dots-navigation">
+          <span class="project-arrow-dot left" data-direction="prev">&#9664;</span>
+          <div class="project-dots-indicators">
+            <span class="project-dot active" data-project="project1"></span>
+            <span class="project-dot" data-project="project2"></span>
+            <span class="project-dot" data-project="project3"></span>
+          </div>
+          <span class="project-arrow-dot right" data-direction="next">&#9654;</span>
+        </div>
+      </div>
+    </section>
+
+<section id="section5" class="content-section">
+      <h1>Blog</h1>
+      <iframe src="index.html" width="800" height="600"></iframe>
+    </section>
+
+  <footer>
+    <h1 style="letter-spacing: 5px;">Lucas</h1>
+    <h1 style="margin-bottom: 20px;">Barba</h1>
+    <div class="linea-blanca"></div>
+    <div>
+      <h4>estudiante - 4AO° I.I.L.A.H</h4>
+      <h4>desarrollador</h4>
+      <h4>arg. CABA</h4>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="script.js"></script>
+
+  <div class="social-wrapper">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" target="_blank" rel="stylesheet">
+    <div class="wrapper">
+      <ul>
+        <li class="facebook"><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+        <li class="twitter"><a href="https://www.x.com/" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+        <li class="instagram"><a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></li>
+        <li class="google"><a href="contactModal"><i class="fa fa-google fa-2x"></i></a></li>
+        <li class="whatsapp"><a href="https://www.whatsapp.com/" target="_blank"><i class="fa fa-whatsapp fa-2x"></i></a></li>
+      </ul>
+    </div>
+  </div>
+
+<div id="contactModal" class="modal-backdrop">
+    <div class="contact-modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Contáctame</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Enviar Mensaje</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
