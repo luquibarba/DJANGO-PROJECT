@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block page_title %}
+    <h2>{{ post.title }}</h2>
+{% endblock page_title %}
+
+{% block page_content %}
+    <small>
+        {{ post.created_on.date }} | Categorías:
+        {% for category in post.categories.all %}
+            <a href="{% url 'blog_category' category.name %}">{{ category.name }}</a>
+        {% endfor %}
+    </small>
+    <p>{{ post.body|linebreaks }}</p>
+
+    <h3>Deja un comentario:</h3>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            {{ form.author }}
+        </div>
+        <div>
+            {{ form.body }}
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+    <h3>Comentarios:</h3>
+    {% for comment in comments %}
+        <p>
+            El {{ comment.created_on.date }} <b>{{ comment.author }}</b> escribió:
+        </p>
+        <p>
+            {{ comment.body|linebreaks }}
+        </p>
+    {% empty %}
+        <p>No hay comentarios aún.</p>
+    {% endfor %}
+{% endblock page_content %}
